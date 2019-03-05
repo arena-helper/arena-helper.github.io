@@ -59,7 +59,7 @@ const calculate = function(){
 };
 
 const copyToClipboard = function(){
-    const textArea = document.createElement('textarea');
+    let textArea = document.createElement('textarea');
     textArea.value = finallist.map(a => a.reduce((b,c) => b + "\t" + c)).reduce((b,c) => b + "\n" + c);
     document.body.appendChild(textArea);
     textArea.select();
