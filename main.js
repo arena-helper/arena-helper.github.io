@@ -12,23 +12,19 @@ Set.prototype.isSubSet = function(otherSet){
 };
 //from https://stackoverflow.com/a/15164958/7476985
 const updateTable = function(tableData, location){
-  let table = document.createElement('table');
-  let tableBody = document.createElement('tbody');
-
-  tableData.forEach(function(rowData, i){
-    let row = document.createElement('tr');
-
-    rowData.forEach(function(cellData){
-      let cell = document.createElement(i ? 'td' : 'th');
-      cell.appendChild(document.createTextNode(cellData));
-      row.appendChild(cell);
+    let table = document.createElement('table');
+    let tableBody = document.createElement('tbody');
+    tableData.forEach(function(rowData, i){
+        let row = document.createElement('tr');
+        rowData.forEach(function(cellData){
+            let cell = document.createElement(i ? 'td' : 'th');
+            cell.appendChild(document.createTextNode(cellData));
+            row.appendChild(cell);
+        });
+        tableBody.appendChild(row);
     });
-
-    tableBody.appendChild(row);
-  });
-
-  table.appendChild(tableBody);
-  location.replaceChild(table, location.childNodes[0]);
+    table.appendChild(tableBody);
+    location.replaceChild(table, location.childNodes[0]);
 };
 
 //from https://stackoverflow.com/a/43053803/7476985
@@ -41,7 +37,6 @@ const calculate = function(){
     const filterArr = classes.map(a => a[0] !== "");
     classes = classes.filter((a,b) => filterArr[b]);
     const header = [1,2,3,4,5,6,7,8,9,10].map(a => "Period " + a).filter((a,b) => filterArr[b]);
-    console.log(header);
     const required = new Set(document.getElementById("paramForm").elements["req"].value.split(/,/).map(b => b.trim()).filter(c => c !== ""));
     const blacklist = new Set(document.getElementById("paramForm").elements["black"].value.split(/,/).map(b => b.trim()).filter(c => c !== ""));
     const clength = classes.length;
