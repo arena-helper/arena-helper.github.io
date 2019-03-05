@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway|Source+Sans+Pro');
+
+body{
+    margin: 16px;
+    background-color: #FFF;
+}
+.content{
+    width: 800px;
+    margin: auto;
+}
+#results{
+    width: auto;
+    display: inline-block
+}
+.resultContent{
+    text-align: center;
+}
+h1{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+    font-size: 48px;
+    letter-spacing: 1px;
+    text-align: center;
+    text-decoration: underline;
+}
+p{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+input[type="text"]{
+    width: 520px;
+    height: 20px;
+    font-size: 14px;
+    margin: 0px;
+}
+
+.formtable{
+    background-color: #fff;
+    border-collapse: collapse;
+    border: 3px #444 solid;
+    margin-left: 16px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.formtable tr{
+    background-color: #fff;
+}
+.formtable tr:nth-child(even){
+    background-color: #ddd
+}
+.formtable td{
+    width: 76px;
+    padding: 4px 2px;
+}
+
+input[type="button"], button{
+    background-color: #4c77a6;
+    color: #fff;
+    padding: 6px;
+    font-size: 20px;
+    border: 2px solid #68a7eb;
+    border-radius: 8px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+input[type="button"]:hover, button:hover{
+    background-color: #5d88b7
+}
+input[type="button"]:active, button:hover{
+    position: relative;
+    top: 1px;
+}
+
+#results table{
+    background-color: #fff;
+    border-collapse: collapse;
+    margin-left: 16px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+#results th{
+    border: 2px solid #666;
+    padding: 6px;
+    font-size: 18px
+}
+#results tr td{
+    border: 2px solid #666;
+    padding: 4px;
+}
+#results tr:nth-child(even){
+    background-color: #ddd;
+}
+#results td{
+    width: 110px;
+}
+#results tr:hover{
+    background-color: #eee;
+}
