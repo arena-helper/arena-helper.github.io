@@ -11,15 +11,15 @@ Set.prototype.isSubSet = function(otherSet){
     } 
 };
 //from https://stackoverflow.com/a/15164958/7476985
-const updateTable = function(tableData, location) {
-  var table = document.createElement('table');
-  var tableBody = document.createElement('tbody');
+const updateTable = function(tableData, location){
+  let table = document.createElement('table');
+  let tableBody = document.createElement('tbody');
 
-  tableData.forEach(function(rowData, i) {
-    var row = document.createElement('tr');
+  tableData.forEach(function(rowData, i){
+    let row = document.createElement('tr');
 
-    rowData.forEach(function(cellData) {
-      var cell = document.createElement(i ? 'td' : 'th');
+    rowData.forEach(function(cellData){
+      let cell = document.createElement(i ? 'td' : 'th');
       cell.appendChild(document.createTextNode(cellData));
       row.appendChild(cell);
     });
