@@ -95,3 +95,6 @@ input[type="button"]:active, button:hover{
 #results tr:hover{
     background-color: #eee;
 }
+a:link, a:visited{
+    color: inherit;
+}
